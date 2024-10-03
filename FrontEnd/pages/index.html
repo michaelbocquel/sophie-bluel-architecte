@@ -9,6 +9,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="../style/style.css">
+	<script type="module" src="../scripts/get-data.js"></script>
+	<script type="module" src="../scripts/display-gallery.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -40,10 +42,10 @@
 <main>
 	<section class="introduction">
 		<figure class="introduction__figure">
-			<img src="../assets/images/sophie-bluel.png" alt="" class="introduction__image" />
+			<img src="../assets/images/sophie-bluel.png" alt="Sophie Bluel photo" class="introduction__image" />
 		</figure>
 		<article class="introduction__article">
-			<h2 class="introduction__title">Designer d'espace</h2>
+			<h2 class="introduction__title section__title">Designer d'espace</h2>
 			<p class="introduction__text">
 				Je raconte votre histoire, je valorise vos idées. Je vous accompagne
 				de la conception à la livraison finale du chantier.
@@ -61,14 +63,12 @@
 			</p>
 		</article>
 	</section>
-	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="gallery">
-			
-		</div>
+	<section id="portfolio" class="portfolio">
+		<h2 class="portfolio__title section__title">Mes Projets</h2>
+		<div class="gallery"></div>
 	</section>
 
-	<section class="contact">
+	<section id="contact" class="contact">
 		<h2 class="contact__title section__title">Contact</h2>
 		<p>Vous avez un projet ? Discutons-en !</p>
 		<form action="#" method="post" class="contact__form">

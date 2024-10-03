@@ -1,7 +1,143 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+body {
+	max-width: 1140px;
+	margin: auto;
+	font-family: "Work Sans";
+	font-size: 14px;
+}
+
+.section__title {
+	font-family: "Syne";
+	font-weight: 700;
+	font-size: 30px;
+	color: #1d6154;
+}
+
+.header {
+	max-width: 1140px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 140px;
+}
+.header__logo {
+	display: flex;
+	flex-direction: column;
+	font-family: "Syne";
+	font-size: 22px;
+	font-weight: 800;
+	color: #b1663c;
+}
+.header__logo__span {
+	font-family: "Work Sans";
+	font-size: 10px;
+	letter-spacing: 0.1em;
+}
+.header__nav__link__wrapper {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	list-style-type: none;
+}
+.header__nav__link {
+	padding: 0 10px;
+	font-size: 1em;
+	color: black;
+	text-decoration: none;
+	font-family: "Work Sans";
+}
+.header__nav__link:hover {
+	color: #b1663c;
+}
+.header__nav__link__image {
+	width: 22px;
+}
+
+.introduction {
+	display: flex;
+	align-items: center;
+	max-width: 1140px;
+	margin: auto;
+	margin-bottom: 140px;
+}
+.introduction__figure {
+	flex: 1;
+}
+.introduction__image {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+.introduction__article {
+	flex: 1;
+}
+.introduction__text {
+	margin-bottom: 0.5em;
+	font-size: 14px;
+	font-family: "Work Sans";
+	color: #3d3d3d;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+.gallery__image {
+	width: 100%;
+}
+
+.contact {
+	width: 50%;
+	margin: auto;
+}
+.contact__title {
+	margin-bottom: 20px;
+}
+.contact__form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+.contact__input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.contact__label {
+	margin: 2em 0 1em 0;
+}
+.contact__message__textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.contact__form__submit {
+	font-family: "Syne";
+	font-weight: 700;
+	color: white;
+	background-color: #1d6154;
+	margin: 2em auto;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+.footer {
+	background-color: var(--white);
+}
+.footer__nav__link__wrapper {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.5em 6em;
+}
+.footer__nav__link {
+	font-family: "Work Sans";
+	font-weight: 300;
+	font-size: 14px;
+}
 
 html,
 body,
@@ -91,7 +227,6 @@ video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -126,161 +261,4 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-/** end reset css**/
-body {
-	max-width: 1140px;
-	margin: auto;
-	font-family: "Work Sans";
-	font-size: 14px;
-}
-.header {
-	max-width: 1140px;
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 140px;
-}
-.header__logo {
-	display: flex;
-	flex-direction: column;
-	font-family: "Syne";
-	font-size: 22px;
-	font-weight: 800;
-	color: #b1663c;
-}
-.header__logo__span {
-	font-family: "Work Sans";
-	font-size: 10px;
-	letter-spacing: 0.1em;
-}
-
-.header__nav__link__wrapper {
-	display: flex;
-	align-items: center;
-	gap: 30px;
-	list-style-type: none;
-}
-.header__nav__link {
-	padding: 0 10px;
-	font-size: 1em;
-	color: black;
-	text-decoration: none;
-	font-family: "Work Sans";
-}
-.header__nav__link:hover {
-	color: #b1663c;
-}
-.header__nav__link__image {
-	width: 22px;
-}
-
-.section__title {
-	font-family: "Syne";
-	font-weight: 700;
-	font-size: 30px;
-	color: #1d6154;
-}
-.introduction {
-	display: flex;
-	align-items: center;
-	max-width: 1140px;
-	margin: auto;
-	margin-bottom: 140px;
-}
-.introduction__figure {
-	flex: 1;
-}
-.introduction__image {
-	display: block;
-	margin: auto;
-	width: 80%;
-}
-.introduction__article {
-	flex: 1;
-}
-.introduction__title {
-	margin-bottom: 1em;
-	font-size: 30px;
-	font-weight: bold;
-	color: var(--green);
-	font-family: "Syne";
-}
-.introduction__text {
-	margin-bottom: 0.5em;
-	font-size: 14px;
-	font-family: "Work Sans";
-	color: #3d3d3d;
-}
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
-.gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
-}
-
-.gallery img {
-	width: 100%;
-}
-.contact {
-	width: 50%;
-	margin: auto;
-}
-.contact > * {
-	text-align: center;
-}
-.contact__title {
-	margin-bottom: 20px;
-}
-.contact__form {
-	text-align: left;
-	margin-top: 30px;
-	display: flex;
-	flex-direction: column;
-}
-
-.contact__input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
-.contact__label {
-	margin: 2em 0 1em 0;
-}
-.contact__message__textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
-
-.contact__form__submit {
-	font-family: "Syne";
-	font-weight: 700;
-	color: white;
-	background-color: #1d6154;
-	margin: 2em auto;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px;
-}
-
-.footer {
-	background-color: var(--white);
-}
-
-.footer__nav__link__wrapper {
-	display: flex;
-	justify-content: flex-end;
-	padding: 1.5em 6em;
-}
-
-.footer__nav__link {
-	font-family: "Work Sans";
-	font-weight: 300;
-	font-size: 14px;
 }
