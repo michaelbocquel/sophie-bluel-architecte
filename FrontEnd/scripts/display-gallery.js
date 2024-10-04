@@ -1,7 +1,7 @@
 import { getData } from "./get-data.js";
 
 const loginLink = document.querySelector(".login__link");
-// const editionModeDisplay = document.querySelector(".edition__mode__display");
+const editionModeDisplay = document.querySelector(".edition__mode__display");
 
 loginLink.innerHTML = "login";
 
@@ -13,10 +13,10 @@ loginLink.addEventListener("click", () => {
 
 if (token) {
 	loginLink.innerHTML = "logout";
-	// editionModeDisplay.classList.remove("hidden");
+	editionModeDisplay.classList.remove("hidden");
 }
 
-export const displayGallery = () => {
+export const displayPortfolioGallery = () => {
 	getData().then((data) => {
 		data.forEach((element) => {
 			console.log(element);
@@ -39,4 +39,4 @@ export const displayGallery = () => {
 	});
 };
 
-displayGallery();
+displayPortfolioGallery();

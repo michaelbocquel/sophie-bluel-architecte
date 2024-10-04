@@ -10,6 +10,16 @@ body {
 	font-size: 14px;
 }
 
+.edition__mode__display {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
 .section__title {
 	font-family: "Syne";
 	font-weight: 700;
