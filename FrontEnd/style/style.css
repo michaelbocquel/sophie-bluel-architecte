@@ -1,21 +1,30 @@
 :root {
 	--green: #1d6154;
+	--brown: #93532f;
+	--cream: #fffef8;
 	--white: #ffffff;
+	--black: #000000;
+	--light-black: #3d3d3d;
 }
 
 body {
-	max-width: 1140px;
-	margin: auto;
 	font-family: "Work Sans";
 	font-size: 14px;
+}
+
+.header,
+.section,
+.footer {
+	max-width: 1140px;
+	margin: auto;
 }
 
 .edition__mode__display {
 	display: flex;
 	justify-content: center;
 	gap: 1em;
-	background-color: black;
-	color: white;
+	background-color: var(--black);
+	color: var(--white);
 	padding: 20px;
 	margin-bottom: 40px;
 }
@@ -24,7 +33,8 @@ body {
 	font-family: "Syne";
 	font-weight: 700;
 	font-size: 30px;
-	color: #1d6154;
+	color: var(--green)
+	;
 }
 
 .hidden {
@@ -32,8 +42,6 @@ body {
 }
 
 .header {
-	max-width: 1140px;
-	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 140px;
@@ -44,7 +52,7 @@ body {
 	font-family: "Syne";
 	font-size: 22px;
 	font-weight: 800;
-	color: #b1663c;
+	color: var(--brown);
 }
 .header__logo__span {
 	font-family: "Work Sans";
@@ -60,12 +68,12 @@ body {
 .header__nav__link {
 	padding: 0 10px;
 	font-size: 1em;
-	color: black;
+	color: var(--black);
 	text-decoration: none;
 	font-family: "Work Sans";
 }
 .header__nav__link:hover {
-	color: #b1663c;
+	color: var(--brown);
 }
 .header__nav__link__image {
 	width: 22px;
@@ -93,7 +101,7 @@ body {
 	margin-bottom: 0.5em;
 	font-size: 14px;
 	font-family: "Work Sans";
-	color: #3d3d3d;
+	color: var(--light-black);
 }
 
 .filter__button,
@@ -153,8 +161,8 @@ body {
 .contact__form__submit {
 	font-family: "Syne";
 	font-weight: 700;
-	color: white;
-	background-color: #1d6154;
+	color: var(--white);
+	background-color: var(--green);
 	margin: 2em auto;
 	width: 180px;
 	text-align: center;
