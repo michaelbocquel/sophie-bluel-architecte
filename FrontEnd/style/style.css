@@ -6,19 +6,15 @@
 	--black: #000000;
 	--light-black: #3d3d3d;
 }
-
-body {
-	font-family: "Work Sans";
-	font-size: 14px;
+.fa-trash-can {
+	color: var(--white);
 }
-
 .header,
 .section,
 .footer {
 	max-width: 1140px;
 	margin: auto;
 }
-
 .edition__mode__display {
 	display: flex;
 	justify-content: center;
@@ -28,19 +24,15 @@ body {
 	padding: 20px;
 	margin-bottom: 40px;
 }
-
 .section__title {
 	font-family: "Syne";
 	font-weight: 700;
 	font-size: 30px;
-	color: var(--green)
-	;
+	color: var(--green);
 }
-
 .hidden {
 	display: none;
 }
-
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -78,7 +70,6 @@ body {
 .header__nav__link__image {
 	width: 22px;
 }
-
 .introduction {
 	display: flex;
 	align-items: center;
@@ -103,7 +94,6 @@ body {
 	font-family: "Work Sans";
 	color: var(--light-black);
 }
-
 .filter__button,
 .reset__button {
 	border: 1px solid var(--green);
@@ -120,7 +110,6 @@ body {
 	background-color: var(--green);
 	color: var(--white);
 }
-
 .gallery {
 	width: 100%;
 	display: grid;
@@ -131,7 +120,6 @@ body {
 .gallery__image {
 	width: 100%;
 }
-
 .contact {
 	width: 50%;
 	margin: auto;
@@ -168,7 +156,6 @@ body {
 	text-align: center;
 	border-radius: 60px;
 }
-
 .footer {
 	background-color: var(--white);
 }
@@ -178,16 +165,21 @@ body {
 	padding: 1.5em 6em;
 }
 .footer__nav__link {
-	font-family: "Work Sans";
 	font-weight: 300;
 	font-size: 14px;
 }
-
+.modal__photo__gallery {
+	display: flex;
+}
 .modal__image {
 	width: 80px;
 	height: auto;
 }
-
+.icon__div {
+	width: 24px;
+	height: 24px;
+	background-color: var(--black);
+}
 html,
 body,
 div,
