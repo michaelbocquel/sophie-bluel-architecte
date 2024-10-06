@@ -19,17 +19,38 @@ modalPhotoGalleryAddButton.addEventListener("click", () => {
 	modalPhotoAdd.classList.remove("hidden");
 });
 
+const token = localStorage.getItem("token");
+
 export const displayModalGallery = () => {
 	getData().then((data) => {
-		data.forEach((element) => {
+		for (let i = 1; i <= data.length; i++) {
+			console.log(i);
 			const image = document.createElement("img");
+			const iconDiv = document.createElement("div");
+			const icon = document.createElement("i");
 
 			image.classList.add("modal__image");
+			iconDiv.classList.add("icon__div");
+			icon.classList.add("fa-solid");
+			icon.classList.add("fa-trash-can");
 
-			image.src = element.imageUrl;
+			image.src = data[i].imageUrl;
 
 			modalPhotoGallery.append(image);
-		});
+			modalPhotoGallery.append(iconDiv);
+			iconDiv.append(icon);
+
+			iconDiv.addEventListener("click", () => {
+				fetch("http://localhost:5678/api/works/" + i, {
+					method: "DELETE",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+						Authorization: `Bearer ${token}`,
+					},
+				}).then((res) => console.log(res));
+			});
+		}
 	});
 };
 

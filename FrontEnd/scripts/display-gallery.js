@@ -19,7 +19,6 @@ if (token) {
 export const displayPortfolioGallery = () => {
 	getData().then((data) => {
 		data.forEach((element) => {
-			console.log(element);
 			const gallery = document.querySelector(".gallery");
 			const figure = document.createElement("figure");
 			const image = document.createElement("img");
