@@ -32,7 +32,7 @@ body {
 .hidden__inherit {
 	display: inherit;
 }
-.edition__mode__display {
+.edit {
 	display: flex;
 	justify-content: center;
 	gap: 1em;
