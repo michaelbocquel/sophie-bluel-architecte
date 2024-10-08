@@ -8,8 +8,8 @@ export const filterGallery = () => {
 		});
 		let uniqueCategories = Array.from(new Set(categories));
 
-		const figures = document.querySelectorAll(".gallery__figure");
 		const gallery = document.querySelector(".gallery");
+		const figures = document.querySelectorAll(".gallery__figure");
 
 		const portfolioTitle = document.querySelector(".portfolio__title");
 		const filterButtonMenu = document.createElement("div");
@@ -21,7 +21,7 @@ export const filterGallery = () => {
 		resetButton.innerHTML = "Tous";
 
 		const token = localStorage.getItem("token");
-		
+
 		if (token) {
 			filterButtonMenu.style.display = "none";
 		}

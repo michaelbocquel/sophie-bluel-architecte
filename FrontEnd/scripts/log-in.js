@@ -3,6 +3,7 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const loginErrorMessage = document.querySelector("#login-error-msg");
 const loginLink = document.querySelector(".login__link");
+const editionModeDisplay = document.querySelector(".edition__mode__display");
 
 async function logIn() {
 	const response = await fetch("http://localhost:5678/api/users/login", {
@@ -27,9 +28,10 @@ formSubmit.addEventListener("click", (e) => {
 	logIn().then((log) => {
 		localStorage.setItem("token", log.token);
 		const token = localStorage.getItem("token");
-		console.log(token);
 		if (token) {
 			loginLink.innerHTML = "logout";
+		} else {
+			editionModeDisplay.classList.add("hidden");
 		}
 	});
 });
