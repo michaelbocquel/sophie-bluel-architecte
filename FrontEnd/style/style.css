@@ -1,19 +1,36 @@
 :root {
-	--green: #1d6154;
-	--brown: #93532f;
-	--cream: #fffef8;
+	--main-color: #1d6154;
+	--secondary-color: #93532f;
+	--background-color: #fffef8;
 	--white: #ffffff;
 	--black: #000000;
 	--light-black: #3d3d3d;
+
+	--main-font: "Syne";
+	--secondary-font: "Work Sans";
+}
+body {
+	background-color: var(--background-color);
 }
 .fa-trash-can {
 	color: var(--white);
 }
 .header,
-.section,
-.footer {
+.section {
 	max-width: 1140px;
 	margin: auto;
+}
+.section__title {
+	font-family: var(--main-font);
+	font-weight: 700;
+	font-size: 30px;
+	color: var(--main-color);
+}
+.hidden {
+	display: none;
+}
+.hidden__inherit {
+	display: inherit;
 }
 .edition__mode__display {
 	display: flex;
@@ -23,15 +40,9 @@
 	color: var(--white);
 	padding: 20px;
 	margin-bottom: 40px;
-}
-.section__title {
-	font-family: "Syne";
-	font-weight: 700;
-	font-size: 30px;
-	color: var(--green);
-}
-.hidden {
-	display: none;
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 16px;
 }
 .header {
 	display: flex;
@@ -41,14 +52,15 @@
 .header__logo {
 	display: flex;
 	flex-direction: column;
-	font-family: "Syne";
+	font-family: var(--main-font);
 	font-size: 22px;
 	font-weight: 800;
-	color: var(--brown);
+	color: var(--secondary-color);
 }
 .header__logo__span {
-	font-family: "Work Sans";
+	font-family: var(--secondary-color);
 	font-size: 10px;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 }
 .header__nav__link__wrapper {
@@ -59,13 +71,11 @@
 }
 .header__nav__link {
 	padding: 0 10px;
-	font-size: 1em;
+	font-size: 16px;
+	font-family: var(--secondary-font);
+	font-weight: 400;
 	color: var(--black);
 	text-decoration: none;
-	font-family: "Work Sans";
-}
-.header__nav__link:hover {
-	color: var(--brown);
 }
 .header__nav__link__image {
 	width: 22px;
@@ -91,23 +101,36 @@
 .introduction__text {
 	margin-bottom: 0.5em;
 	font-size: 14px;
-	font-family: "Work Sans";
+	font-family: var(--secondary-font);
+	font-weight: 400;
 	color: var(--light-black);
+}
+.portfolio__title {
+	text-align: center;
+}
+.portfolio__modify__button {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 14px;
+}
+.filter__button__menu {
+	margin-top: 1em;
 }
 .filter__button,
 .reset__button {
-	border: 1px solid var(--green);
+	border: 1px solid var(--main-color);
 	background-color: var(--white);
-	color: var(--green);
+	color: var(--main-color);
 	border-radius: 60px;
+	font-family: var(--main-font);
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700;
 	text-align: center;
 	padding: 5px 10px;
 }
 .filter__button:focus,
 .reset__button:focus {
-	background-color: var(--green);
+	background-color: var(--main-color);
 	color: var(--white);
 }
 .gallery {
@@ -120,12 +143,20 @@
 .gallery__image {
 	width: 100%;
 }
-.contact {
-	width: 50%;
-	margin: auto;
+.gallery__figcaption {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 13px;
 }
-.contact__title {
-	margin-bottom: 20px;
+.form {
+	width: 30%;
+	margin: 3em auto 0;
+}
+.form__label,
+.form__input {
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	font-size: 14px;
 }
 .form {
 	text-align: left;
@@ -142,19 +173,41 @@
 .form__label {
 	margin: 2em 0 1em 0;
 }
+.form__submit {
+	font-family: var(--main-font);
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--white);
+	background-color: var(--main-color);
+	margin: 2em auto;
+	padding: 10px 0;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+	border: none;
+}
+.contact__title {
+	margin: 2em 0 1em;
+	text-align: center;
+}
+.contact__text {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center;
+}
+
 .contact__message__textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-.contact__form__submit {
-	font-family: "Syne";
-	font-weight: 700;
-	color: var(--white);
-	background-color: var(--green);
-	margin: 2em auto;
-	width: 180px;
+.login__title {
 	text-align: center;
-	border-radius: 60px;
+}
+.forgotten__password {
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	font-size: 14px;
 }
 .footer {
 	background-color: var(--white);
@@ -165,6 +218,7 @@
 	padding: 1.5em 6em;
 }
 .footer__nav__link {
+	font-family: var(--secondary-font);
 	font-weight: 300;
 	font-size: 14px;
 }
