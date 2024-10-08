@@ -1,118 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Sophie Bluel - Architecte d'intérieur</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
-	<meta name="description" content="">
-	<link rel="stylesheet" href="../style/style.css">
-	<script
-		src="https://kit.fontawesome.com/d65fe2ac69.js"
-		crossorigin="anonymous" >
-	</script>
-	<script type="module" src="../scripts/get-data.js"></script>
-	<script type="module" src="../scripts/display-gallery.js"></script>
-	<script type="module" src="../scripts/filter-gallery.js"></script>
-	<script type="module" src="../scripts/log-in.js"></script>
-	<script type="module" src="../scripts/modal.js"></script>
-</head>
-<body>
-	<div class="edition__mode__display hidden">
-		<i class="fa-regular fa-pen-to-square"></i>
-		<p class="portfolio__modify__text">Mode édition</p>
-	</div>
-	<header class="header">
-		<h1 class="header__logo">
-			Sophie Bluel
-			<span class="header__logo__span">Architecte d'intérieur</span>
-		</h1>
-		<nav class="header__nav">
-			<ul class="header__nav__link__wrapper">
-				<a href="#portfolio" class="header__nav__link">
-					<li>projets</li>
-				</a>
-				<a href="#contact" class="header__nav__link">
-					<li>contact</li>
-				</a>
-				<a href="./login.html" class="header__nav__link login__link">
-					<li"></li>
-				</a>
-				<li class="header__nav__link">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Sophie Bluel - Architecte d'intérieur</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="../style/style.css" />
+		<script
+			src="https://kit.fontawesome.com/d65fe2ac69.js"
+			crossorigin="anonymous"
+		></script>
+		<script type="module" src="../scripts/get-data.js"></script>
+		<script type="module" src="../scripts/display-gallery.js"></script>
+		<script type="module" src="../scripts/filter-gallery.js"></script>
+		<script type="module" src="../scripts/log-in.js"></script>
+		<script type="module" src="../scripts/modal.js"></script>
+	</head>
+	<body>
+		<div class="edition__mode__display hidden">
+			<i class="fa-regular fa-pen-to-square"></i>
+			<p class="portfolio__modify__text">Mode édition</p>
+		</div>
+		<header class="header">
+			<h1 class="header__logo">
+				Sophie Bluel
+				<span class="header__logo__span">Architecte d'intérieur</span>
+			</h1>
+			<nav class="header__nav">
+				<ul class="header__nav__link__wrapper">
+					<a href="#portfolio" class="header__nav__link">
+						<li>projets</li>
+					</a>
+					<a href="#contact" class="header__nav__link">
+						<li>contact</li>
+					</a>
+					<a href="./login.html" class="header__nav__link login__link">
+						<li></li>
+					</a>
+					<li class="header__nav__link">
+						<img
+							src="../assets/icons/instagram.png"
+							alt="link to Instagram"
+							class="header__nav__link__image"
+						/>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="section introduction">
+				<figure class="introduction__figure">
 					<img
-						src="../assets/icons/instagram.png"
-						alt="link to Instagram"
-						class="header__nav__link__image"
+						src="../assets/images/sophie-bluel.png"
+						alt="Sophie Bluel photo"
+						class="introduction__image"
 					/>
-				</li>
-			</ul>
-		</nav>
-	</header>
-<main>
-	<section class="section introduction">
-		<figure class="introduction__figure">
-			<img src="../assets/images/sophie-bluel.png" alt="Sophie Bluel photo" class="introduction__image" />
-		</figure>
-		<article class="introduction__article">
-			<h2 class="introduction__title section__title">Designer d'espace</h2>
-			<p class="introduction__text">
-				Je raconte votre histoire, je valorise vos idées. Je vous accompagne
-				de la conception à la livraison finale du chantier.
-			</p>
-			<p class="introduction__text">
-				Chaque projet sera étudié en commun, de façon à mettre en valeur les
-				volumes, les matières et les couleurs dans le respect de l'esprit
-				des lieux et le choix adapté des matériaux. Le suivi du chantier
-				sera assuré dans le souci du détail, le respect du planning et du
-				budget.
-			</p>
-			<p class="introduction__text">
-				En cas de besoin, une équipe pluridisciplinaire peut-être constituée
-				: architecte DPLG, décorateur(trice)
-			</p>
-		</article>
-	</section>
-	<section id="portfolio" class="section portfolio">
-		<h2 class="portfolio__title section__title">Mes Projets</h2>
-		<button class="portfolio__modify__button">Modifier</button>
-		<div class="gallery"></div>
-	</section>
-	<section id="contact" class="section contact">
-		<h2 class="contact__title section__title">Contact</h2>
-		<p>Vous avez un projet ? Discutons-en !</p>
-		<form action="#" method="post" class="form contact__form">
-			<label for="name" class="contact__name__label contact__label">Nom</label>
-			<input type="text" name="name" id="name" class="contact__name__input contact__input">
-			<label for="email" class="contact__email__label contact__label">Email</label>
-			<input type="email" name="email" id="email" class="contact__email__input contact__input">
-			<label for="message" class="contact__message__label contact__label">Message</label>
-			<textarea name="message" id="message" cols="30" rows="10" class="contact__message__textarea"></textarea>
-			<input type="submit" value="Envoyer" class="contact__form__submit">
-		</form>
-	</section>
-</main>
-<footer class="footer">
-	<nav class="footer__nav">
-		<ul class="footer__nav__link__wrapper">
-			<li class="footer__nav__link">Mentions Légales</li>
-		</ul>
-	</nav>
-</footer>
-<dialog class="modal">
-	<div class="modal__photo__gallery">
-		<p>Galerie photo</p>
-		<button class="modal__photo__gallery__add__button">Ajouter une photo</button>
-	</div>
-	<div class="modal__photo__add hidden">
-		<p>Ajout photo</p>
-		<button>+ Ajouter photo</button>
-		<p>jpg, png : 4mo max</p>
-		<p>Titre</p>
-		<p>Catégorie</p>
-		<button>Valider</button>
-	</div>
-</dialog>
-</body>
+				</figure>
+				<article class="introduction__article">
+					<h2 class="introduction__title section__title">Designer d'espace</h2>
+					<p class="introduction__text">
+						Je raconte votre histoire, je valorise vos idées. Je vous accompagne
+						de la conception à la livraison finale du chantier.
+					</p>
+					<p class="introduction__text">
+						Chaque projet sera étudié en commun, de façon à mettre en valeur les
+						volumes, les matières et les couleurs dans le respect de l'esprit
+						des lieux et le choix adapté des matériaux. Le suivi du chantier
+						sera assuré dans le souci du détail, le respect du planning et du
+						budget.
+					</p>
+					<p class="introduction__text">
+						En cas de besoin, une équipe pluridisciplinaire peut-être constituée
+						: architecte DPLG, décorateur(trice)
+					</p>
+				</article>
+			</section>
+			<section id="portfolio" class="section portfolio">
+				<h2 class="portfolio__title section__title">Mes Projets</h2>
+				<button class="portfolio__modify__button">Modifier</button>
+				<div class="gallery"></div>
+			</section>
+			<section id="contact" class="section contact">
+				<h2 class="contact__title section__title">Contact</h2>
+				<p class="contact__text">Vous avez un projet ? Discutons-en !</p>
+				<form action="#" method="post" class="contact__form form">
+					<label for="name" class="contact__label form__label">Nom</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						class="contact__input form__input"
+					/>
+					<label for="email" class="contact__label form__label">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="contact__input form__input"
+					/>
+					<label for="message" class="contact__label form__label"
+						>Message</label
+					>
+					<textarea
+						name="message"
+						id="message"
+						cols="30"
+						rows="10"
+						class="contact__message__textarea"
+					></textarea>
+					<input
+						type="submit"
+						value="Envoyer"
+						class="contact__form__submit form__submit"
+					/>
+				</form>
+			</section>
+		</main>
+		<footer class="footer">
+			<nav class="footer__nav">
+				<ul class="footer__nav__link__wrapper">
+					<li class="footer__nav__link">Mentions Légales</li>
+				</ul>
+			</nav>
+		</footer>
+		<dialog class="modal">
+			<div class="modal__photo__gallery">
+				<p class="modal__photo__gallery__title">Galerie photo</p>
+				<button class="modal__photo__gallery__add__button">
+					Ajouter une photo
+				</button>
+			</div>
+			<div class="modal__photo__add hidden">
+				<i class="fa-solid fa-arrow-left"></i>
+				<p>Ajout photo</p>
+				<form action="" class="modal__form form">
+					<button>+ Ajouter photo</button>
+					<p>jpg, png : 4mo max</p>
+					<label for="title" class="modal__label form__label">Titre</label>
+					<input
+						type="text"
+						name="title"
+						id="title"
+						class="contact__input form__input"
+					/>
+					<label for="category" class="modal__label form__label"
+						>Catégorie</label
+					>
+					<input
+						type="text"
+						name="category"
+						id="category"
+						class="contact__input form__input"
+					/>
+					<input
+						type="submit"
+						value="Valider"
+						class="modal__form__submit form__submit"
+					/>
+				</form>
+			</div>
+		</dialog>
+	</body>
 </html>

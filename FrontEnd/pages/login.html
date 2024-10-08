@@ -22,14 +22,14 @@
 			</h1>
 			<nav class="header__nav">
 				<ul class="header__nav__link__wrapper">
-					<a href="./index.html">
-						<li class="header__nav__link">projets</li>
+					<a href="./index.html" class="header__nav__link">
+						<li>projets</li>
 					</a>
-					<a href="./index.html">
-						<li class="header__nav__link">contact</li>
+					<a href="./index.html" class="header__nav__link">
+						<li>contact</li>
 					</a>
-					<a href="./login.html">
-						<li class="header__nav__link">login</li>
+					<a href="./login.html" class="header__nav__link">
+						<li>login</li>
 					</a>
 					<li class="header__nav__link">
 						<img
@@ -42,20 +42,33 @@
 			</nav>
 		</header>
 
-		<h2>Log In</h2>
-
-		<section id="contact">
-			<form action="#" class="form" name="form">
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" />
-				<label for="password">Mot de passe</label>
-				<input type="password" name="password" id="password" />
+		<section id="section login">
+			<h2 class="login__title section__title">Log In</h2>
+			<form action="#" class="login__form form" name="form">
+				<label for="email" class="login__label form__label">Email</label>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					class="login__input form__input"
+				/>
+				<label for="password" class="login__label form__label"
+					>Mot de passe</label
+				>
+				<input
+					type="password"
+					name="password"
+					id="password"
+					class="login__input form__input"
+				/>
 				<div id="login-error-msg-holder">
-					<p id="login-error-msg">
-						Invalid username and/or password
-					</p>
+					<p id="login-error-msg">Invalid username and/or password</p>
 				</div>
-				<input type="submit" value="Se connecter" class="form__submit" />
+				<input
+					type="submit"
+					value="Se connecter"
+					class="login__form__submit form__submit"
+				/>
 				<p class="forgotten__password">Mot de passe oublié</p>
 			</form>
 		</section>
