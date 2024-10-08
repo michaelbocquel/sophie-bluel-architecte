@@ -1,21 +1,5 @@
 import { getData } from "./get-data.js";
 
-const loginLink = document.querySelector(".login__link");
-const editionModeDisplay = document.querySelector(".edition__mode__display");
-
-loginLink.innerHTML = "login";
-
-const token = localStorage.getItem("token");
-
-loginLink.addEventListener("click", () => {
-	localStorage.removeItem("token");
-});
-
-if (token) {
-	loginLink.innerHTML = "logout";
-	editionModeDisplay.classList.remove("hidden");
-}
-
 export const displayPortfolioGallery = () => {
 	getData().then((data) => {
 		data.forEach((element) => {
