@@ -1,6 +1,7 @@
 const loginLink = document.querySelector(".login__link");
 const portfolio = document.querySelector(".portfolio");
 const portfolioTitle = document.querySelector(".portfolio__title");
+const filterButtonMenu = document.querySelector(".filter__button__menu");
 
 loginLink.innerHTML = "login";
 
@@ -9,6 +10,7 @@ const token = localStorage.getItem("token");
 if (token) {
 	loginLink.innerHTML = "logout";
 	loginLink.href = "";
+	filterButtonMenu.classList.add("hidden");
 
 	const editDiv = document.createElement("div");
 	editDiv.classList.add("edit");

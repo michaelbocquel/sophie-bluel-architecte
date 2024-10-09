@@ -1,29 +1,37 @@
-const formSubmit = document.querySelector(".form__submit");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-const loginErrorMessage = document.querySelector("#login-error-msg");
+const loginFormSubmit = document.querySelector(".login__form__submit");
+const loginFormEmailInput = document.querySelector(
+	".login__form__email__input"
+);
+const loginFormPasswordInput = document.querySelector(
+	".login__form__password__input"
+);
+const loginFormErrorMessage = document.querySelector(
+	".login__form__error__message"
+);
 
-async function logIn() {
-	const response = await fetch("http://localhost:5678/api/users/login", {
+const logIn = () => {
+	fetch("http://localhost:5678/api/users/login", {
 		method: "POST",
 		headers: {
 			Accept: "application/json",
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify({ email: email.value, password: password.value }),
+		body: JSON.stringify({
+			email: loginFormEmailInput.value,
+			password: loginFormPasswordInput.value,
+		}),
+	}).then((response) => {
+		if (response.status === 200) {
+			window.location.href = "../pages/index.html";
+			localStorage.setItem("token", response.token);
+			return response.json();
+		} else {
+			loginFormErrorMessage.style.opacity = 1;
+		}
 	});
-	if (response.ok === true) {
-		window.location.href = "../pages/index.html";
-		return response.json();
-	} else {
-		loginErrorMessage.style.opacity = 1;
-		throw new Error("Impossible de contacter le serveur");
-	}
-}
+};
 
-formSubmit.addEventListener("click", (e) => {
+loginFormSubmit.addEventListener("click", (e) => {
 	e.preventDefault();
-	logIn().then((log) => {
-		localStorage.setItem("token", log.token);
-	});
+	logIn();
 });
