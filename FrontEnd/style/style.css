@@ -47,7 +47,7 @@ body {
 .header {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 140px;
+	margin: 50px 150px 140px;
 }
 .header__logo {
 	display: flex;
@@ -105,13 +105,19 @@ body {
 	font-weight: 400;
 	color: var(--light-black);
 }
+.portfolio__title__div {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	gap: 10px;
+}
 .portfolio__title {
-	text-align: center;
+	justify-self: center;
 }
 .portfolio__modify__button {
 	font-family: var(--secondary-font);
 	font-weight: 400;
 	font-size: 14px;
+	width: 84px;
 }
 .filter__button__menu {
 	margin-top: 1em;
@@ -234,6 +240,27 @@ body {
 	height: 24px;
 	background-color: var(--black);
 }
+.login__form__error__message {
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	font-size: 14px;
+	margin-top: 1.5em;
+	opacity: 0;
+	color: red;
+}
+.login__form__forgotten__password {
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	font-size: 14px;
+	margin: 0 auto 2em;
+	text-decoration: underline;
+}
+.login__footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
 html,
 body,
 div,

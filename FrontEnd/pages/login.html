@@ -29,7 +29,7 @@
 					<a href="./index.html" class="header__nav__link">
 						<li>contact</li>
 					</a>
-					<a href="./login.html" class="header__nav__link">
+					<a href="./login.html" class="header__nav__link login__link">
 						<li>login</li>
 					</a>
 					<li class="header__nav__link">
@@ -46,32 +46,41 @@
 		<section id="section login">
 			<h2 class="login__title section__title">Log In</h2>
 			<form action="#" class="login__form form" name="form">
-				<label for="email" class="login__label form__label">Email</label>
+				<label for="email" class="login__form__email__label form__label"
+					>Email</label
+				>
 				<input
 					type="email"
 					name="email"
-					id="email"
-					class="login__input form__input"
+					class="login__form__email__input form__input"
 				/>
-				<label for="password" class="login__label form__label"
+				<label for="password" class="login__form__password__label form__label"
 					>Mot de passe</label
 				>
 				<input
 					type="password"
 					name="password"
-					id="password"
-					class="login__input form__input"
+					class="login__form__password__input form__input"
 				/>
-				<div id="login-error-msg-holder">
-					<p id="login-error-msg">Invalid username and/or password</p>
+				<div class="login__form__error__message__wrapper">
+					<p class="login__form__error__message">
+						Combinaison email / mot de passe invalide
+					</p>
 				</div>
 				<input
 					type="submit"
 					value="Se connecter"
 					class="login__form__submit form__submit"
 				/>
-				<p class="forgotten__password">Mot de passe oublié</p>
+				<p class="login__form__forgotten__password">Mot de passe oublié</p>
 			</form>
 		</section>
+		<footer class="footer login__footer">
+			<nav class="footer__nav">
+				<ul class="footer__nav__link__wrapper">
+					<li class="footer__nav__link">Mentions légales</li>
+				</ul>
+			</nav>
+		</footer>
 	</body>
 </html>
