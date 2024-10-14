@@ -1,6 +1,6 @@
 import { getData } from "./get-data.js";
 
-export const displayPortfolioGallery = () => {
+const displayPortfolioGallery = () => {
 	getData().then((data) => {
 		data.forEach((element) => {
 			const gallery = document.querySelector(".gallery");
