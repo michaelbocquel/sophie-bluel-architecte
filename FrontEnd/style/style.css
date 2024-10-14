@@ -1,5 +1,6 @@
 :root {
 	--main-color: #1d6154;
+	--main-color-hover: #0e2f28;
 	--secondary-color: #93532f;
 	--background-color: #fffef8;
 	--white: #ffffff;
@@ -77,6 +78,9 @@ body {
 	color: var(--black);
 	text-decoration: none;
 }
+.header__nav__link:hover {
+	font-weight: 600;
+}
 .header__nav__link__image {
 	width: 22px;
 }
@@ -86,6 +90,9 @@ body {
 	max-width: 1140px;
 	margin: auto;
 	margin-bottom: 140px;
+}
+.introduction__title {
+	margin-bottom: 1em;
 }
 .introduction__figure {
 	flex: 1;
@@ -109,18 +116,24 @@ body {
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
 	gap: 10px;
+	margin-bottom: 2em;
 }
 .portfolio__title {
 	justify-self: center;
 }
-.portfolio__modify__button {
+.portfolio__modify__div {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin-left: 1.5em;
 	font-family: var(--secondary-font);
 	font-weight: 400;
 	font-size: 14px;
 	width: 84px;
 }
 .filter__button__menu {
-	margin-top: 1em;
+	margin-bottom: 2em;
+	text-align: center;
 }
 .filter__button,
 .reset__button {
@@ -192,6 +205,9 @@ body {
 	border-radius: 60px;
 	border: none;
 }
+.form__submit:hover {
+	background-color: var(--main-color-hover);
+}
 .contact__title {
 	margin: 2em 0 1em;
 	text-align: center;
@@ -228,17 +244,107 @@ body {
 	font-weight: 300;
 	font-size: 14px;
 }
+.modal {
+	width: 630px;
+	height: 688px;
+	border-radius: 10px;
+}
+.modal__photo__gallery__div {
+	display: flex;
+	flex-direction: column;
+}
+.fa-xmark {
+	align-self: flex-end;
+}
 .modal__photo__gallery {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 20px 50px;
+}
+.modal__photo__gallery__title {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 26px;
+	text-align: center;
+	padding-bottom: 30px;
 }
 .modal__image {
 	width: 80px;
 	height: auto;
+	padding-bottom: 30px;
 }
 .icon__div {
 	width: 24px;
 	height: 24px;
 	background-color: var(--black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 6px;
+	right: 30px;
+}
+.modal__photo__gallery__separator {
+	border: 1px solid #b3b3b3;
+	width: 420px;
+	align-self: center;
+	margin-bottom: 20px;
+}
+.modal__photo__add__title {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 26px;
+	text-align: center;
+}
+.modal__form {
+	width: 420px;
+}
+.modal__form__photo {
+	max-height: 201px;
+}
+.modal__form__photo__add {
+	width: 420px;
+	height: 169px;
+	border-radius: 3px;
+	background-color: #e8f1f6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 0;
+	gap: 1em;
+}
+.modal__form__button {
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	font-size: 14px;
+	color: #306685;
+	background-color: #cbd6dc;
+	border-radius: 50px;
+	border: none;
+	gap: 0.5em;
+	padding: 0.5em 1em;
+}
+.modal__image__input {
+	display: none;
+}
+.modal__form__size__info {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 10px;
+	color: #444444;
+	z-index: 0;
+}
+.modal__title__input,
+.modal__category__input {
+	width: 420px;
+}
+.modal__photo__add__separator {
+	border: 1px solid #b3b3b3;
+	width: 420px;
+	align-self: center;
+	margin: 50px 0 20px;
 }
 .login__form__error__message {
 	font-family: var(--secondary-font);
