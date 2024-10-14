@@ -20,15 +20,16 @@ const logIn = () => {
 			email: loginFormEmailInput.value,
 			password: loginFormPasswordInput.value,
 		}),
-	}).then((response) => {
-		if (response.status === 200) {
-			window.location.href = "../pages/index.html";
-			localStorage.setItem("token", response.token);
-			return response.json();
-		} else {
-			loginFormErrorMessage.style.opacity = 1;
-		}
-	});
+	})
+		.then((response) => {
+			if (response.status === 200) {
+				window.location.href = "../pages/index.html";
+				return response.json();
+			} else {
+				loginFormErrorMessage.style.opacity = 1;
+			}
+		})
+		.then((data) => localStorage.setItem("token", data.token));
 };
 
 loginFormSubmit.addEventListener("click", (e) => {

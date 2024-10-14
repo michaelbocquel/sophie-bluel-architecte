@@ -20,15 +20,23 @@ if (token) {
 	const editText = document.createElement("p");
 	editText.classList.add("edit__text");
 	editText.innerHTML = "Mode édition";
-	const portfolioModifyButton = document.createElement("button");
-	portfolioModifyButton.classList.add("portfolio__modify__button");
-	portfolioModifyButton.innerHTML = "Modifier";
+	const portfolioModifyDiv = document.createElement("div");
+	portfolioModifyDiv.classList.add("portfolio__modify__div");
+	const portfolioModifyIcon = document.createElement("i");
+	portfolioModifyIcon.classList.add("portfolio__modify__icon");
+	portfolioModifyIcon.classList.add("fa-regular");
+	portfolioModifyIcon.classList.add("fa-pen-to-square");
+	const portfolioModifyText = document.createElement("p");
+	portfolioModifyText.classList.add("portfolio__modify__text");
+	portfolioModifyText.innerHTML = "modifier";
 
 	editDiv.append(editIcon);
 	editDiv.append(editText);
 	document.body.prepend(editDiv);
-	document.body.append(portfolioModifyButton);
-	portfolioTitle.after(portfolioModifyButton);
+	document.body.append(portfolioModifyDiv);
+	portfolioTitle.after(portfolioModifyDiv);
+	portfolioModifyDiv.append(portfolioModifyIcon);
+	portfolioModifyDiv.append(portfolioModifyText);
 }
 
 loginLink.addEventListener("click", () => {
