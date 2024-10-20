@@ -9,8 +9,8 @@ const loginFormErrorMessage = document.querySelector(
 	".login__form__error__message"
 );
 
-const logIn = () => {
-	fetch("http://localhost:5678/api/users/login", {
+const logIn = async () => {
+	await fetch("http://localhost:5678/api/users/login", {
 		method: "POST",
 		headers: {
 			Accept: "application/json",

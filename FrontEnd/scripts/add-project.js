@@ -12,8 +12,8 @@ const token = localStorage.getItem("token");
 
 modalImageInput.addEventListener("change", (event) => {
 	modalFormPhoto.src = window.URL.createObjectURL(event.target.files[0]);
-	modalFormButton.classList.add('hidden')
-	modalFormSizeInfo.classList.add('hidden')
+	modalFormButton.classList.add("hidden");
+	modalFormSizeInfo.classList.add("hidden");
 });
 
 getCategories().then((data) => {
@@ -25,23 +25,19 @@ getCategories().then((data) => {
 	}
 });
 
-export const addProject = (e) => {
+export const addProject = async (e) => {
 	e.preventDefault();
 	let formData = new FormData();
 	formData.append("title", modalTitleInput.value);
 	formData.append("category", parseInt(modalCategorySelect.value));
 	formData.append("image", modalImageInput.files[0]);
-	fetch("http://localhost:5678/api/works", {
+	await fetch("http://localhost:5678/api/works", {
 		method: "POST",
 		headers: {
 			Accept: "application/json",
 			Authorization: `Bearer ${token}`,
 		},
 		body: formData,
-	}).then((response) => {
-		if (response.status === 201) {
-			window.location.reload();
-		}
 	});
 };
 modalForm.onsubmit = (e) => {

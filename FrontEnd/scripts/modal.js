@@ -73,8 +73,8 @@ export const displayModalGallery = () => {
 			modalPhotoGallery.append(iconDiv);
 			iconDiv.append(icon);
 
-			iconDiv.addEventListener("click", () => {
-				const response = fetch(
+			iconDiv.addEventListener("click", async () => {
+				await fetch(
 					"http://localhost:5678/api/works/" + `${data[i].id}`,
 					{
 						method: "DELETE",
@@ -88,7 +88,6 @@ export const displayModalGallery = () => {
 					if (res.status === 204) {
 						image.remove();
 						iconDiv.remove();
-						window.location.reload();
 					}
 				});
 			});
