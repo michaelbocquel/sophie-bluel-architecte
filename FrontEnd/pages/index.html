@@ -32,15 +32,15 @@
 			</h1>
 			<nav class="header__nav">
 				<ul class="header__nav__link__wrapper">
-					<a href="#portfolio" class="header__nav__link">
-						<li>projets</li>
-					</a>
-					<a href="#contact" class="header__nav__link">
-						<li>contact</li>
-					</a>
-					<a href="./login.html" class="header__nav__link login__link">
-						<li></li>
-					</a>
+					<li>
+						<a href="#portfolio" class="header__nav__link"> projets </a>
+					</li>
+					<li>
+						<a href="#contact" class="header__nav__link"> contact </a>
+					</li>
+					<li>
+						<a href="./login.html" class="header__nav__link login__link"></a>
+					</li>
 					<li class="header__nav__link">
 						<img
 							src="../assets/icons/instagram.png"
@@ -60,7 +60,7 @@
 						class="introduction__image"
 					/>
 				</figure>
-				<article class="introduction__article">
+				<div class="introduction__article">
 					<h2 class="introduction__title section__title">Designer d'espace</h2>
 					<p class="introduction__text">
 						Je raconte votre histoire, je valorise vos idées. Je vous accompagne
@@ -77,7 +77,7 @@
 						En cas de besoin, une équipe pluridisciplinaire peut-être constituée
 						: architecte DPLG, décorateur(trice)
 					</p>
-				</article>
+				</div>
 			</section>
 			<section id="portfolio" class="section portfolio">
 				<div class="portfolio__title__div">
@@ -150,11 +150,20 @@
 			<div class="modal__photo__add hidden">
 				<i class="fa-solid fa-arrow-left"></i>
 				<p class="modal__photo__add__title">Ajout photo</p>
-				<form action="" class="modal__form form">
+				<form action="#" class="modal__form form">
 					<div class="modal__form__photo__add">
-						<img src="../assets/icons/image-add-project.png" alt="" class="modal__form__photo">
+						<img
+							src="../assets/icons/image-add-project.png"
+							alt=""
+							class="modal__form__photo"
+						/>
 						<label for="modal__image__input" class="modal__form__button">
-							<input type="file" name="image" class="modal__image__input" id="modal__image__input" />+ Ajouter photo
+							<input
+								type="file"
+								name="image"
+								class="modal__image__input"
+								id="modal__image__input"
+							/>+ Ajouter photo
 						</label>
 						<p class="modal__form__size__info">jpg, png : 4mo max</p>
 					</div>
@@ -166,13 +175,14 @@
 						class="modal__title__input form__input"
 					/>
 					<label for="category" class="modal__label form__label">
-					Catégorie
+						Catégorie
 					</label>
 					<select
 						name="category"
 						id="category"
 						class="modal__category__select form__input"
-						required>
+						required
+					>
 						<option value="">Select a category</option>
 					</select>
 					<div class="modal__photo__add__separator"></div>
@@ -180,7 +190,7 @@
 						type="submit"
 						value="Valider"
 						class="modal__form__submit form__submit"
-					></input>
+					/>
 				</form>
 			</div>
 		</dialog>

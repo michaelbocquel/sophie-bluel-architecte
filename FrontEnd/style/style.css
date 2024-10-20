@@ -59,7 +59,7 @@ body {
 	color: var(--secondary-color);
 }
 .header__logo__span {
-	font-family: var(--secondary-color);
+	font-family: var(--secondary-font);
 	font-size: 10px;
 	font-weight: 400;
 	letter-spacing: 0.1em;
